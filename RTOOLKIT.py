@@ -3,6 +3,7 @@ from pathlib import Path
 import platform
 os.system("python3 -m pip install subprocess.run -q -q -q")
 print("[*] Checking Requirements Module.....")
+os.system("python3 -m pip install termcolor -q -q -q")
 if platform.system().startswith("Linux"):
     #subprocess.call("apt install wine", shell=True)
     try:
@@ -34,12 +35,7 @@ if platform.system().startswith("Linux"):
         import cryptography
     except ImportError:
         os.system("python3 -m pip install cryptography -q -q -q")
-    import cryptography
-    try:
-        import termcolor
-    except ImportError:
-        os.system("python3 -m pip install termcolor -q -q -q")
-        import termcolor
+    import cryptography 
     try:
         from pystyle import *
     except:
@@ -507,6 +503,5 @@ connection.close()
     print(termcolor.colored("FOR MORE UPDATES VISIT THIS GITHUB PAGE:- https://github.com/raghu14321", 'blue'))
 else:
     os.system("exit") 
-
 
 
