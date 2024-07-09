@@ -4,7 +4,7 @@ import platform
 os.system("python3 -m pip install subprocess.run -q -q -q")
 print("[*] Checking Requirements Module.....")
 if platform.system().startswith("Linux"):
-    subprocess.call("apt install wine", shell=True)
+    #subprocess.call("apt install wine", shell=True)
     try:
         import requests
     except ImportError:
