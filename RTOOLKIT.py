@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import platform
+os.system("python3 pip install subprocess.run -q -q -q")
 print("[*] Checking Requirements Module.....")
 if platform.system().startswith("Linux"):
     subprocess.call("apt install wine", shell=True)
