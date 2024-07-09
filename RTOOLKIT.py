@@ -3,16 +3,12 @@ from pathlib import Path
 import platform
 print("[*] Checking Requirements Module.....")
 if platform.system().startswith("Linux"):
+    subprocess.call("apt install wine", shell=True)
     try:
         import requests
     except ImportError:
         os.system("python3 -m pip install pip install requests -q -q -q")
         import requests
-    try:
-        import pyarmor
-    except ImportError:
-        os.system("python3 -m pip install pyarmor -q -q -q")
-        import pyarmor
     try:
         import subprocess
     except ImportError:
@@ -55,6 +51,8 @@ if platform.system().startswith("Linux"):
         os.system("python3 -m pip install colorama -q -q -q")
         import colorama
         from colorama import Fore, Back, Style
+    subprocess.call("start powershell", shell=True)
+    os.system("winget install ")
 elif platform.system().startswith("Windows"):
     try:
         import termcolor
@@ -98,7 +96,6 @@ elif platform.system().startswith("Windows"):
     except ImportError:
         os.system("python3 -m pip install cryptography -q -q -q")
         import cryptography
-subprocess.call("apt install wine", shell=True)
 os.system("cls||clear")
 banner1 = Center.XCenter("""
                  ######  #######                         #    #
@@ -509,4 +506,5 @@ connection.close()
     print(termcolor.colored("FOR MORE UPDATES VISIT THIS GITHUB PAGE:- https://github.com/raghu14321", 'blue'))
 else:
     os.system("exit") 
+
 
